@@ -107,9 +107,6 @@ public_users.get("/", function (req, res) {
   );
 });
 
-// Task 11
-// Add the code for getting the book details based on ISBN (done in Task 2) using Promise callbacks or async-await with Axios.
-
 function getFromISBN(isbn) {
   let book_ = books[isbn];
   return new Promise((resolve, reject) => {
@@ -129,9 +126,6 @@ public_users.get("/isbn/:isbn", function (req, res) {
     (error) => res.send(error)
   );
 });
-
-// Task 12
-// Add the code for getting the book details based on Author (done in Task 3) using Promise callbacks or async-await with Axios.
 
 function getFromAuthor(author) {
   let output = [];
@@ -153,9 +147,6 @@ public_users.get("/author/:author", function (req, res) {
     res.send(JSON.stringify(result, null, 4))
   );
 });
-
-// Task 13
-// Add the code for getting the book details based on Title (done in Task 4) using Promise callbacks or async-await with Axios.
 
 function getFromTitle(title) {
   let output = [];

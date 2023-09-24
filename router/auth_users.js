@@ -23,7 +23,6 @@ const authenticatedUser = (username, password) => {
 
 //only registered users can login
 regd_users.post("/login", (req, res) => {
-  //Write your code here
   console.log("login: ", req.body);
   const username = req.body.username;
   const password = req.body.password;
@@ -55,7 +54,6 @@ regd_users.post("/login", (req, res) => {
 
 // Add a book review
 regd_users.put("/auth/review/:isbn", (req, res) => {
-  //Write your code here
   const isbn = req.params.isbn;
   const review = req.body.review;
   const username = req.session.authorization.username;
